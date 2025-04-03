@@ -1,0 +1,13 @@
+module.exports.authService = require("./auth.service");
+module.exports.userService = require("./user.service");
+module.exports.tokenService = require("./token.service");
+module.exports.productService = require("./product.services");
+module.exports.vendorService = require("./vendor.service");
+module.exports.locationService = require("./location.service")
+module.exports.vendorPackageService = require("./vendorPackage.service");
+module.exports.fieldService = require("./field.service")
+module.exports.sportTypeService = require("./sportType.service")
+module.exports.bookingService = require("./booking.service");
+module.exports.paymentPortalService = require("./paymentPortal.service")
+module.exports.orderService = require("./order.service");
+module.exports.slotDisablerService=require("./slotDisabler.service")

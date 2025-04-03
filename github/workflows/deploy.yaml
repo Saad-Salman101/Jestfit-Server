@@ -1,0 +1,35 @@
+name: Deploy Node.js Server
+
+on:
+  push:
+    branches:
+      - main  # Trigger on push to main branch
+
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Build the project
+        run: |
+          npm run build
+
+      - name: Deploy to server
+        run: |
+          rsync -avz ./ user@yourserver:/path/to/your/node-server/
+          ssh user@yourserver "pm2 restart your-app-name"
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}    

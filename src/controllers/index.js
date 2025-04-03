@@ -1,0 +1,12 @@
+module.exports.userController = require("./user.controller");
+module.exports.productController = require("./product.controller");
+module.exports.vendorController = require("./vendor.controller");
+module.exports.authController = require("./auth.controller");
+module.exports.locationController = require("./location.controller")
+module.exports.vendorPackageController = require("./vendorPackage.controller")
+module.exports.fieldController = require("./field.controller")
+module.exports.sportTypeController = require("./sportType.controller")
+module.exports.bookingController = require("./booking.controller");
+module.exports.paymentPortalController = require("./paymentPortal.controller")
+module.exports.orderController = require("./order.controller");
+module.exports.slotDisablerController = require("./slotDisabler.controller");

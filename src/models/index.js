@@ -1,0 +1,11 @@
+module.exports.User = require("./user.model");
+module.exports.Product = require("./product.model");
+module.exports.Vendor = require("./vendor.model");
+module.exports.Location = require("./location.model")
+module.exports.VendorPackage = require("./vendorPackage.model");
+module.exports.Field = require("./field.model")
+module.exports.SportType = require("./sportType.model")
+module.exports.Booking = require("./booking.model");
+module.exports.PaymentPortal = require("./paymentPortal.model");
+module.exports.Order = require("./order.model");
+module.exports.SlotDisabler = require("./slotDisabler.model")
