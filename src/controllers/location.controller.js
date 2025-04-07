@@ -9,6 +9,7 @@ const {
 const { deleteImageBylink } = require("../middlewares/s3Functions");
 const { addImagesToFieldByID } = require("../services/field.service");
 
+// create location in S3 code working
 const createLocation = catchAsync(async (req, res) => {
   // console.log(req.filesData, "<=-- files");
   // const mybody = JSON.parse(req.formData);
@@ -32,6 +33,27 @@ const createLocation = catchAsync(async (req, res) => {
     .status(httpStatus.CREATED)
     .send({ success: true, message: "Successfully created Location", result });
 });
+
+// create Location in localStorage
+// const createLocation = catchAsync(async (req, res) => {
+//   console.log("req.body", req.body);
+//   console.log(req.filesData, "<=-- files");
+
+//   // For local storage
+//   if (req.filesData) {
+//     let images = req.filesData.map((image, i) => {
+//       return {
+//         uri: image, // Local file path
+//       };
+//     });
+//     req.body.images = images;
+//   }
+
+//   const result = await locationService.createLocation(req.body);
+//   res
+//     .status(httpStatus.CREATED)
+//     .send({ success: true, message: "Successfully created Location", result });
+// });
 
 // const createLocation = catchAsync(async (req, res) => {
 //   console.log(req.filesData, "<=-- files");
